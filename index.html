@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Doctorblast</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    html, body {
+      margin: 0; padding: 0; scroll-behavior: smooth; font-family: 'Poppins', sans-serif; background: #f9f9f9;
+    }
+
+    /* Navbar */
+    .navbar { background-color: #111827 !important; }
+    .navbar-brand { color: white !important; font-weight: bold; text-transform: uppercase; }
+    .navbar-nav .nav-link { color: white !important; font-weight: 500; text-transform: uppercase; padding: 0.5rem 1rem; }
+    .navbar-nav .nav-link:hover { color: #d1d5db !important; }
+    .dropdown-menu { background-color: #111827; border-radius: 8px; border: none; }
+    .dropdown-item { color: white !important; padding: 10px 15px; text-transform: none; }
+    .dropdown-item:hover { background-color: #1f2937; }
+
+    /* Hero image full height */
+    .hero-img { width: 100%; height: 100vh; object-fit: cover; }
+
+    /* Our Story Carousel */
+    #storyCarousel .carousel-item img {
+      width: 45%; margin: 0 10px; border-radius: 10px; object-fit: cover; transition: transform 0.3s ease;
+    }
+    #storyCarousel .carousel-item img:hover { transform: scale(1.05); }
+
+    /* Carousel indicators style */
+    #storyCarousel .carousel-indicators [data-bs-target] { background-color: darkblue; }
+    #storyCarousel .carousel-indicators .active { background-color: navy; }
+    #storyCarousel .carousel-control-prev, #storyCarousel .carousel-control-next { display: none; }
+
+    /* CEO Section */
+    .ceo-section { display: flex; align-items: center; gap: 20px; margin: 50px 0; flex-wrap: wrap; }
+    .ceo-img { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; }
+    .ceo-name { text-align: center; font-weight: bold; margin-top: 10px; }
+    .ceo-text { flex: 1; min-width: 250px; }
+
+    /* Footer */
+    .footer-section { background: #111827; color: white; padding: 20px 0; }
+    .social-icon { width: 45px; height: 45px; transition: transform 0.25s ease, opacity 0.25s ease; opacity: 0.85; }
+    .social-icon:hover { transform: translateY(-5px) scale(1.15); opacity: 1; }
+    .footer-text { font-size: 0.9rem; opacity: 0.8; }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#">Doctorblast</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">OUR PROJECTS</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="partnerDropdown" role="button" data-bs-toggle="dropdown">
+              PARTNER WITH US
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="partnerDropdown">
+              <li><a class="dropdown-item" href="partner.html#donate">Donate to Support</a></li>
+              <li><a class="dropdown-item" href="partner.html#volunteer">Volunteer</a></li>
+              <li><a class="dropdown-item" href="partner.html#monetary">Monetary Support</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT US</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Image -->
+  <img src="static/css/images/green.jpg" alt="Smiling children" class="hero-img">
+
+  <!-- Our Story -->
+  <div class="container my-5">
+    <h1>Our Story</h1>
+    <p>The idea for Doctorblast began in the year 2020 while the current CEO, Dr. Elly Inda, was in his second year of his medical school training during which he had volunteered as a teacher in Kiboro Primary School in Mathare, Kenya with PACEMaker International — a non-profit organization that serves to provide quality education in resource-limited areas. Seeing how the kids there had no immediate access to emergency health care response yet having medical conditions ranging from Epilepsy to Heart defect which require prompt medical attention, his heart was deeply moved by the plight of the children from these areas. It was from there that he began to train the pupils on basic life saving procedures. In the steps of The Great Physician, he however felt that this was not enough as there was still a great need to spread The Gospel of Christ therein, thus launching Discipleship and Bible study classes on the same. He believes that one student touched is a whole family touched and with that the whole community is touched.</p>
+
+    <!-- Our Story Carousel -->
+    <div id="storyCarousel" class="carousel slide my-5" data-bs-ride="carousel" data-bs-interval="3000">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#storyCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+        <button type="button" data-bs-target="#storyCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#storyCarousel" data-bs-slide-to="2"></button>
+      </div>
+      <div class="carousel-inner text-center">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="d-flex justify-content-center flex-wrap gap-4">
+            <img src="static/css/images/book.jpg" alt="Smiling Children">
+            <img src="static/css/images/mouth.jpg" alt="Smiling Children">
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center flex-wrap gap-4">
+            <img src="static/css/images/shirt.jpg" alt="Smiling Children">
+            <img src="static/css/images/mawe.jpg" alt="Smiling Children">
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center flex-wrap gap-4">
+            <img src="static/css/images/air.jpg" alt="Smiling Children">
+            <img src="static/css/images/handy.jpg" alt="Smiling Children">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CEO Section -->
+    <div class="ceo-section">
+      <div>
+        <img src="static/css/images/me.jpg" alt="Dr. Elly Inda" class="ceo-img">
+        <p class="ceo-name">Dr. Elly Inda</p>
+      </div>
+      <div class="ceo-text">
+        <h2>Word from our CEO</h2>
+        <p>We have all been given the ability to serve. Service doesn't have to be in the grandest of gestures, just showing you care and are willing to show love even by the smallest acts of compassion is service. Let us go into the world and serve our fellows just as Master commanded us. Be blessed.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-section mt-5 py-4">
+    <div class="container text-center">
+      <ul class="social-links list-unstyled d-flex justify-content-center gap-4 mb-3">
+        <li><a href="https://wa.me/254793671728" target="_blank"><img src="static/css/images/What.png" class="social-icon" alt="WhatsApp"></a></li>
+        <li><a href="https://www.instagram.com/_inda027" target="_blank"><img src="static/css/images/instagram.png" class="social-icon" alt="Instagram"></a></li>
+        <li><a href="https://www.facebook.com/@elly.inda.7" target="_blank"><img src="static/css/images/fb.png" class="social-icon" alt="Facebook"></a></li>
+        <li><a href="https://www.linkedin.com/in/inda-otieno-440277322" target="_blank"><img src="static/css/images/Linked.png" class="social-icon" alt="LinkedIn"></a></li>
+      </ul>
+      <p class="footer-text mb-0">© 2025 Inda Otieno. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

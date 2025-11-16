@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Projects | DoctorBlast</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="static/css/style.css">
+
+  <style>
+    /* Scroll behavior */
+    html { scroll-behavior: smooth; }
+
+    /* Body & Font */
+    body {
+      background: #f9f9f9;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #111827;
+    }
+
+    /* Navbar */
+    .navbar { background-color: #111827 !important; }
+    .navbar-brand { color: white !important; font-weight: bold; text-transform: uppercase; }
+    .navbar-nav .nav-link { color: white !important; font-weight: 500; text-transform: uppercase; padding: 0.5rem 1rem; }
+    .navbar-nav .nav-link:hover { color: #d1d5db !important; }
+    .dropdown-menu { background-color: #111827; border-radius: 8px; border: none; }
+    .dropdown-item { color: white !important; padding: 10px 15px; text-transform: none; }
+    .dropdown-item:hover { background-color: #1f2937; }
+    @media (min-width: 992px) { .navbar .dropdown:hover .dropdown-menu { display: block; } }
+
+    /* Heading */
+    h1 { font-weight: 700; }
+
+    /* Program Cards */
+    .program-card {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 18px;
+      text-align: center;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    }
+    .program-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 28px rgba(0,0,0,0.20);
+    }
+    .program-img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+    }
+    .program-card:hover .program-img {
+      transform: scale(1.04);
+    }
+    .program-card h5 {
+      font-size: 1.15rem;
+      margin-top: 15px;
+      font-weight: 600;
+    }
+    .program-card p {
+      font-size: 0.95rem;
+      margin-top: 8px;
+      color: #444;
+    }
+
+    /* Read More Button */
+    .btn-custom {
+      background-color: #111827;
+      color: white;
+      border: none;
+      transition: background 0.3s ease;
+    }
+    .btn-custom:hover {
+      background-color: #1f2937;
+    }
+
+    @media (max-width: 768px) { .program-img { height: 200px; } }
+    @media (max-width: 480px) { .program-img { height: 170px; } }
+
+    /* Footer */
+    .footer-section {
+      background: #111827;
+      color: white;
+    }
+    .social-icon {
+      width: 45px;
+      height: 45px;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+      opacity: 0.85;
+    }
+    .social-icon:hover {
+      transform: translateY(-5px) scale(1.15);
+      opacity: 1;
+    }
+    .footer-text { font-size: 0.9rem; opacity: 0.8; }
+
+    /* Modal styling */
+    .modal-content {
+      font-family: 'Poppins', sans-serif;
+      border-radius: 14px;
+      padding: 20px;
+    }
+    .modal-content h4 {
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .modal-content p {
+      color: #444;
+    }
+    .btn-close {
+      background: #111827;
+      opacity: 0.8;
+    }
+    .btn-close:hover {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#">Doctorblast</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">OUR PROJECTS</a></li>
+
+          <!-- Partner Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="partnerDropdown" role="button" data-bs-toggle="dropdown">
+              PARTNER WITH US
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="partnerDropdown">
+              <li><a class="dropdown-item" href="partner.html#donate">Donate to Support</a></li>
+              <li><a class="dropdown-item" href="partner.html#volunteer">Volunteer</a></li>
+              <li><a class="dropdown-item" href="partner.html#monetary">Monetary Support</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT US</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container mt-5">
+    <h1 class="text-center mb-5">Programs and Activities</h1>
+    <div class="row g-4">
+
+      <!-- Program Cards -->
+      <div class="col-md-6 col-lg-4">
+        <div class="program-card">
+          <img src="static/css/images/aid.jpg" class="program-img" alt="Aid">
+          <h5>First Aid Training</h5>
+          <p>Empowering youth with life-saving skills.</p>
+          <button class="btn btn-custom mt-2" data-bs-toggle="modal" data-bs-target="#modal1">Read More</button>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="program-card">
+          <img src="static/css/images/camp.jpg" class="program-img" alt="Camp">
+          <h5>Medical Mission Camps</h5>
+          <p>Screening, referrals & free treatment.</p>
+          <button class="btn btn-custom mt-2" data-bs-toggle="modal" data-bs-target="#modal2">Read More</button>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="program-card">
+          <img src="static/css/images/Study.jpg" class="program-img" alt="Bible Study">
+          <h5>Bible Study & Discipleship</h5>
+          <p>Weekly scripture teaching & spiritual growth.</p>
+          <button class="btn btn-custom mt-2" data-bs-toggle="modal" data-bs-target="#modal3">Read More</button>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="program-card">
+          <img src="static/css/images/OUT.jpg" class="program-img" alt="Outreach">
+          <h5>Community Outreach</h5>
+          <p>Health education for a healthier society.</p>
+          <button class="btn btn-custom mt-2" data-bs-toggle="modal" data-bs-target="#modal4">Read More</button>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="program-card">
+          <img src="static/css/images/ed.jpg" class="program-img" alt="Education">
+          <h5>Life Support in Schools</h5>
+          <p>Training students in emergency skills.</p>
+          <button class="btn btn-custom mt-2" data-bs-toggle="modal" data-bs-target="#modal5">Read More</button>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="program-card">
+          <img src="static/css/images/MEN.jpg" class="program-img" alt="Mentorship">
+          <h5>Mentorship & Leadership</h5>
+          <p>Guiding graduates toward leadership.</p>
+          <button class="btn btn-custom mt-2" data-bs-toggle="modal" data-bs-target="#modal6">Read More</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Modals -->
+  <div class="modal fade" id="modal1" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <button type="button" class="btn-close float-end" data-bs-dismiss="modal"></button>
+        <h4>First Aid Training</h4>
+        <p>This program equips children and youths with essential first aid and basic life support techniques.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <button type="button" class="btn-close float-end" data-bs-dismiss="modal"></button>
+        <h4>Medical Mission Camps</h4>
+        <p>Annual camps in Mathare, Kibera, and Huruma providing screenings, treatment, and referrals.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal3" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <button type="button" class="btn-close float-end" data-bs-dismiss="modal"></button>
+        <h4>Bible Study & Discipleship</h4>
+        <p>Weekly biblical teachings with mentorship to nurture a strong foundation of faith.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal4" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <button type="button" class="btn-close float-end" data-bs-dismiss="modal"></button>
+        <h4>Community Outreach</h4>
+        <p>Grassroot health awareness on disease prevention, hygiene, and lifestyle education.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal5" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <button type="button" class="btn-close float-end" data-bs-dismiss="modal"></button>
+        <h4>Life Support in Schools</h4>
+        <p>Training students in emergency response techniques and forming DoctorBlast Clubs.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal6" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <button type="button" class="btn-close float-end" data-bs-dismiss="modal"></button>
+        <h4>Mentorship & Leadership</h4>
+        <p>Graduates are assigned mentors to guide them in leadership, academics, and service.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-section mt-5 py-4">
+    <div class="container text-center">
+      <ul class="social-links list-unstyled d-flex justify-content-center gap-4 mb-3">
+        <li><a href="https://wa.me/254793671728" target="_blank"><img src="static/css/images/What.png" class="social-icon" alt="WhatsApp"></a></li>
+        <li><a href="https://www.instagram.com/_inda027" target="_blank"><img src="static/css/images/instagram.png" class="social-icon" alt="Instagram"></a></li>
+        <li><a href="https://www.facebook.com/@elly.inda.7" target="_blank"><img src="static/css/images/fb.png" class="social-icon" alt="Facebook"></a></li>
+        <li><a href="https://www.linkedin.com/in/inda-otieno-440277322" target="_blank"><img src="static/css/images/Linked.png" class="social-icon" alt="LinkedIn"></a></li>
+      </ul>
+      <p class="footer-text mb-0">&copy; 2025 Inda Otieno. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

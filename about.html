@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Doctorblast</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="static/css/style.css">
+
+  <style>
+    html { scroll-behavior: smooth; font-family: 'Poppins', sans-serif; }
+    body { background: #f9f9f9; margin: 0; font-family: 'Poppins', sans-serif; }
+
+    /* Navbar */
+    .navbar { background-color: #111827 !important; }
+    .navbar-brand { color: white !important; font-weight: bold; text-transform: uppercase; }
+    .navbar-nav .nav-link { color: white !important; font-weight: 500; text-transform: uppercase; padding: 0.5rem 1rem; }
+    .navbar-nav .nav-link:hover { color: #d1d5db !important; }
+    .dropdown-menu { background-color: #111827; border-radius: 8px; border: none; }
+    .dropdown-item { color: white !important; padding: 10px 15px; text-transform: none; }
+    .dropdown-item:hover { background-color: #1f2937; }
+
+    /* Footer */
+    .footer-section { background: #111827; color: white; }
+    .social-icon { width: 45px; height: 45px; transition: transform 0.25s ease, opacity 0.25s ease; opacity: 0.85; }
+    .social-icon:hover { transform: translateY(-5px) scale(1.15); opacity: 1; }
+    .footer-text { font-size: 0.9rem; opacity: 0.8; }
+
+    /* Vision & Mission Images - Smaller & responsive */
+    .vision-mission-img {
+      max-width: 50%;
+      height: auto;
+      margin: 0 auto;
+      display: block;
+    }
+    @media (max-width: 768px) {
+      .vision-mission-img { max-width: 70%; }
+    }
+    @media (max-width: 480px) {
+      .vision-mission-img { max-width: 90%; }
+    }
+
+    /* Location Image */
+    .location-img { max-width: 60%; height: auto; display: block; margin: 0 auto 15px auto; }
+
+    /* Map */
+    .map-container { width: 100%; max-width: 600px; margin: 20px auto; }
+
+    /* Core Values Carousel (Retained) */
+    .core-value-img { width: 300px; height: 300px; object-fit: cover; border-radius: 10px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .core-value-img:hover { transform: translateY(-15px); box-shadow: 0 15px 30px rgba(0,0,0,0.25); }
+    .core-value-item h5 { margin-top: 0.5rem; font-weight: bold; font-size: 1.2rem; }
+    @media (max-width: 992px) { .core-value-img { width: 250px; height: 250px; } }
+    @media (max-width: 768px) { .core-value-img { width: 200px; height: 200px; } }
+    @media (max-width: 480px) { .core-value-img { width: 150px; height: 150px; } }
+
+    /* Carousel indicators style */
+    .carousel-indicators [data-bs-target] { background-color: aqua; }
+    .carousel-indicators .active { background-color: deepskyblue; }
+    .carousel-control-prev, .carousel-control-next { display: none; }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#">Doctorblast</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">OUR PROJECTS</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="partnerDropdown" role="button" data-bs-toggle="dropdown">
+              PARTNER WITH US
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="partnerDropdown">
+              <li><a class="dropdown-item" href="partner.html#donate">Donate to Support</a></li>
+              <li><a class="dropdown-item" href="partner.html#volunteer">Volunteer</a></li>
+              <li><a class="dropdown-item" href="partner.html#monetary">Monetary Support</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT US</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container my-5">
+
+    <!-- Vision -->
+    <section class="text-center mb-5">
+      <h1>Our Vision</h1>
+      <img src="static/css/images/visio.jpg" alt="Vision" class="img-fluid vision-mission-img">
+      <p class="lead fw-bold">To raise a generation of empowered young lifesavers, equipped with medical skills and grounded in the Gospel of Christ, transforming their communities with hope and healing.</p>
+    </section>
+
+    <!-- Mission -->
+    <section class="text-center mb-5">
+      <h1>Our Mission</h1>
+      <img src="static/css/images/missio.jpg" alt="Mission" class="img-fluid vision-mission-img">
+      <p class="lead fw-bold">To provide accessible medical skill training and Christ-centered discipleship that inspires youth to become agents of hope in their communities.</p>
+    </section>
+
+    <!-- Core Values Carousel -->
+    <h1 class="text-center mb-4">Core Values</h1>
+    <div id="coreValuesCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#coreValuesCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+        <button type="button" data-bs-target="#coreValuesCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#coreValuesCarousel" data-bs-slide-to="2"></button>
+      </div>
+      <div class="carousel-inner text-center">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="d-flex justify-content-center flex-wrap gap-4">
+            <div class="core-value-item">
+              <img src="static/css/images/loving.jpg" alt="Love" class="img-fluid core-value-img">
+              <h5 class="mt-2">Love</h5>
+            </div>
+            <div class="core-value-item">
+              <img src="static/css/images/faith.jpg" alt="Faith" class="img-fluid core-value-img">
+              <h5 class="mt-2">Faith</h5>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center flex-wrap gap-4">
+            <div class="core-value-item">
+              <img src="static/css/images/hoping.jpg" alt="Hope" class="img-fluid core-value-img">
+              <h5 class="mt-2">Hope</h5>
+            </div>
+            <div class="core-value-item">
+              <img src="static/css/images/disciple .jpg" alt="Discipleship" class="img-fluid core-value-img">
+              <h5 class="mt-2">Discipleship</h5>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center flex-wrap gap-4">
+            <div class="core-value-item">
+              <img src="static/css/images/med.jpg" alt="Medicine" class="img-fluid core-value-img">
+              <h5 class="mt-2">Medicine</h5>
+            </div>
+            <div class="core-value-item">
+              <img src="static/css/images/heal.jpg" alt="Healing" class="img-fluid core-value-img">
+              <h5 class="mt-2">Healing</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Location -->
+    <section class="text-center my-5">
+      <h1>Location</h1>
+      <img src="static/css/images/hosp.jpg" alt="KNH" class="img-fluid location-img">
+      <p>We are currently located at The University of Nairobi, Faculty of Health Sciences, just opposite The Nairobi Hospital.</p>
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.798684048194!2d36.80134337452903!3d-1.295367398692322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f109555d32b53%3A0x742fed8596c675f0!2sThe%20Nairobi%20Hospital!5e0!3m2!1sen!2ske!4v1763262337087!5m2!1sen!2ske" 
+          width="100%" 
+          height="350" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-section mt-5 py-4">
+    <div class="container text-center">
+      <ul class="social-links list-unstyled d-flex justify-content-center gap-4 mb-3">
+        <li><a href="https://wa.me/254793671728" target="_blank"><img src="static/css/images/What.png" class="social-icon" alt="WhatsApp"></a></li>
+        <li><a href="https://www.instagram.com/_inda027" target="_blank"><img src="static/css/images/instagram.png" class="social-icon" alt="Instagram"></a></li>
+        <li><a href="https://www.facebook.com/@elly.inda.7" target="_blank"><img src="static/css/images/fb.png" class="social-icon" alt="Facebook"></a></li>
+        <li><a href="https://www.linkedin.com/in/inda-otieno-440277322" target="_blank"><img src="static/css/images/Linked.png" class="social-icon" alt="LinkedIn"></a></li>
+      </ul>
+      <p class="footer-text mb-0">© 2025 Inda Otieno. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

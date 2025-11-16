@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Doctorblast</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+    html { scroll-behavior: smooth; }
+
+    .navbar { background-color: #111827 !important; }
+    .navbar-brand { color: white !important; font-weight: bold; text-transform: uppercase; }
+    .navbar-nav .nav-link { color: white !important; font-weight: 500; text-transform: uppercase; padding: 0.5rem 1rem; }
+    .navbar-nav .nav-link:hover { color: #d1d5db !important; }
+    .dropdown-menu { background-color: #111827; border-radius: 8px; border: none; }
+    .dropdown-item { color: white !important; padding: 10px 15px; text-transform: none; }
+    .dropdown-item:hover { background-color: #1f2937; }
+    @media (min-width: 992px) { .navbar .dropdown:hover .dropdown-menu { display: block; } }
+
+        /* Footer */
+        .footer-section { background: #111827; color: white; }
+        .social-icon { width: 45px; height: 45px; transition: transform 0.25s ease, opacity 0.25s ease; opacity: 0.85; }
+        .social-icon:hover { transform: translateY(-5px) scale(1.15); opacity: 1; }
+        .footer-text { font-size: 0.9rem; opacity: 0.8; }
+
+        /* Contact form */
+        .contact-section {
+            max-width: 700px;
+            margin: auto;
+            background: #f8fafc;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        .contact-section h3 { font-weight: 700; color: #111827; }
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            border: 1px solid #d1d5db;
+            border-radius: 10px;
+            padding: 12px;
+            width: 100%;
+            margin-bottom: 15px;
+            transition: 0.3s ease;
+        }
+        .contact-form input:focus,
+        .contact-form textarea:focus,
+        .contact-form select:focus {
+            border-color: #111827;
+            box-shadow: 0 0 8px rgba(17,24,39,0.4);
+            outline: none;
+        }
+        .contact-form button {
+            background: #111827;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-size: 1rem;
+            width: 100%;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+        .contact-form button:hover {
+            background: #1f2937;
+            transform: scale(1.05);
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.03); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+ <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#">Doctorblast</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">OUR PROJECTS</a></li>
+
+          <!-- Partner Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="partnerDropdown" role="button" data-bs-toggle="dropdown">
+              PARTNER WITH US
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="partnerDropdown">
+              <li><a class="dropdown-item" href="partner.html#donate">Donate to Support</a></li>
+              <li><a class="dropdown-item" href="partner.html#volunteer">Volunteer</a></li>
+              <li><a class="dropdown-item" href="partner.html#monetary">Monetary Support</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT US</a></li>
+        </ul>
+      </div>
+  </nav>
+</header>
+<main>
+    <h1>Location</h1>
+    <div class="contact-section mt-5">
+        <h3 class="text-center mb-3">Contact Me</h3>
+        <p class="text-center">Feel free to reach out for collaborations, questions, or opportunities.</p>
+        <form class="contact-form" action="#" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <div class="row">
+                <div class="col-4">
+                    <select name="country_code" required>
+                        <option value="+254">Kenya (+254)</option>
+                        <option value="+256">Uganda (+256)</option>
+                        <option value="+255">Tanzania (+255)</option>
+                        <option value="+27">South Africa (+27)</option>
+                        <option value="+1">United States (+1)</option>
+                        <option value="+44">United Kingdom (+44)</option>
+                    </select>
+                </div>
+                <div class="col-8">
+                    <input type="text" name="phone" placeholder="Phone Number" maxlength="9" required>
+                </div>
+            </div>
+            <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer-section mt-5 py-4">
+    <div class="container text-center">
+        <ul class="social-links list-unstyled d-flex justify-content-center gap-4 mb-3">
+            <li>
+                <a href="https://wa.me/254793671728" target="_blank">
+                    <img src="static/css/images/What.png" alt="WhatsApp" class="social-icon">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/_inda027" target="_blank">
+                    <img src="static/css/images/instagram.png" alt="Instagram" class="social-icon">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/@elly.inda.7" target="_blank">
+                    <img src="static/css/images/fb.png" alt="Facebook" class="social-icon">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/inda-otieno-440277322" target="_blank">
+                    <img src="static/css/images/Linked.png" alt="LinkedIn" class="social-icon">
+                </a>
+            </li>
+        </ul>
+        <p class="footer-text mb-0">© 2025 Inda Otieno. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // Prevent typing non-digits in phone field
+    const phoneInput = document.querySelector("input[name='phone']");
+    phoneInput.addEventListener("input", function() {
+        this.value = this.value.replace(/\D/g, "");
+    });
+</script>
+</body>
+</html>

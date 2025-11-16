@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partner With Us | Doctorblast</title>
+
+  <!-- Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="static/css/style.css">
+
+  <style>
+    html, body {
+      scroll-behavior: smooth;
+      font-family: 'Poppins', sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #111827 !important;
+    }
+    .navbar-brand {
+      color: white !important;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .navbar-nav .nav-link {
+      color: white !important;
+      font-weight: 500;
+      text-transform: uppercase;
+      padding: 0.5rem 1rem;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #d1d5db !important;
+    }
+    .dropdown-menu {
+      background-color: #111827;
+      border-radius: 8px;
+      border: none;
+    }
+    .dropdown-item {
+      color: white !important;
+      padding: 10px 15px;
+    }
+    .dropdown-item:hover {
+      background-color: #1f2937;
+    }
+
+    /* Footer */
+    .footer-section {
+      background: #111827;
+      color: white;
+    }
+    .social-icon {
+      width: 45px;
+      height: 45px;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+      opacity: 0.85;
+    }
+    .social-icon:hover {
+      transform: translateY(-5px) scale(1.15);
+      opacity: 1;
+    }
+    .footer-text {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    /* Partner Page Specific */
+    .partner-section {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 15px;
+    }
+
+    .partner-section h3 {
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+    .partner-section p {
+      margin-bottom: 15px;
+    }
+
+    /* Partner images same size */
+    .partner-img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    /* Blessed section */
+    .blessed-section {
+      background: #f3f4f6;
+      padding: 40px 20px;
+      border-radius: 12px;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .blessed-img {
+      max-width: 300px;
+      height: auto;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="index.html">Doctorblast</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">OUR PROJECTS</a></li>
+
+          <!-- Partner Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="partnerDropdown" role="button" data-bs-toggle="dropdown">
+              PARTNER WITH US
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="partnerDropdown">
+              <li><a class="dropdown-item" href="#donate">Donate to Support</a></li>
+              <li><a class="dropdown-item" href="#volunteer">Volunteer</a></li>
+              <li><a class="dropdown-item" href="#monetary">Monetary Support</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT US</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Partner Content -->
+  <main class="partner-section">
+
+    <!-- Partner Options Row -->
+    <div class="row g-4 text-center">
+      <div class="col-md-4">
+        <h3 id="donate">Donate to Support</h3>
+        <img src="static/css/images/don.jpg" class="img-fluid partner-img" alt="Donate">
+        <p>Support our programs through both medical and food donations. Your contribution helps empower the community and save lives.</p>
+      </div>
+
+      <div class="col-md-4">
+        <h3 id="volunteer">Volunteer</h3>
+        <img src="static/css/images/volunteer.jpg" class="img-fluid partner-img" alt="Volunteer">
+        <p>Join our team of volunteers and make a tangible difference in the lives of children and youth.</p>
+      </div>
+
+      <div class="col-md-4">
+        <h3 id="monetary">Monetary Support</h3>
+        <img src="static/css/images/give.jpg" class="img-fluid partner-img" alt="Monetary">
+        <p>Provide financial support for our various projects, including training, outreach, and mentorship programs.</p>
+      </div>
+    </div>
+
+    <!-- Blessed Section -->
+    <section class="blessed-section">
+      <img src="static/css/images/donate.jpg" class="img-fluid blessed-img" alt="Hand that giveth">
+      <p style="font-weight: bold; font-size: 2rem;">Blessed is the hand that giveth</p>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-section mt-5 py-4">
+    <div class="container text-center">
+      <ul class="social-links list-unstyled d-flex justify-content-center gap-4 mb-3">
+        <li><a href="https://wa.me/254793671728" target="_blank"><img src="static/css/images/What.png" class="social-icon" alt="WhatsApp"></a></li>
+        <li><a href="https://www.instagram.com/_inda027" target="_blank"><img src="static/css/images/instagram.png" class="social-icon" alt="Instagram"></a></li>
+        <li><a href="https://www.facebook.com/@elly.inda.7" target="_blank"><img src="static/css/images/fb.png" class="social-icon" alt="Facebook"></a></li>
+        <li><a href="https://www.linkedin.com/in/inda-otieno-440277322" target="_blank"><img src="static/css/images/Linked.png" class="social-icon" alt="LinkedIn"></a></li>
+      </ul>
+      <p class="footer-text mb-0">© 2025 Inda Otieno. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
